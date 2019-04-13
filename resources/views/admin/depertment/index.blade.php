@@ -81,7 +81,7 @@
 
                       <button type="submit" onclick="deletetest({{$data->id}})" class="btn btn-danger waves-effect"> Delete</button>
 
-                      <form id="delete-action-{{$data->id}}" action="{{route('admin.test.destroy',$data->id)}}" method="post">
+                      <form id="delete-action-{{$data->id}}" action="{{route('admin.department.destroy',$data->id)}}" method="post">
                         @method('delete')
                         @csrf
 
@@ -102,7 +102,31 @@
             
        
         </div>
-            
+             <script type="text/javascript">
+          
+          function deletetest(id){
+
+                Swal.fire({
+                          title: 'Are you sure?',
+                          text: "You won't be able to revert this!",
+                          type: 'warning',
+                          showCancelButton: true,
+                          confirmButtonColor: '#3085d6',
+                          cancelButtonColor: '#d33',
+                          confirmButtonText: 'Yes, delete it!'
+                        }).then((result) => {
+                          if (result.value) {                           
+                            document.getElementById('delete-action-'+id).submit();
+                          }
+                        })
+
+
+
+          }
+
+        </script>
+
+
 
 @endsection
 
