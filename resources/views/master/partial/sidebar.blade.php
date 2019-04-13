@@ -20,6 +20,42 @@
 
 
                         </li>
+
+
+                        <li>
+
+                            <a href="#"><i class="fa fa-user-md"></i> <span>Test</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="{{route('admin.test.create')}}">Add Test</a></li>
+                                <li><a href="{{route('admin.test.index')}}">All Test</a></li>
+                                
+                            </ul>
+
+
+
+
+                        </li>
+
+
+
+                        <li>
+
+                            <a href="#"><i class="fa fa-hospital-o"></i> <span>Depertment</span>  <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="{{route('admin.department.create')}}">Add Depertment</a></li>
+                                <li><a href="{{route('admin.department.index')}}">All Depertment</a></li>
+                                
+                            </ul>
+
+
+
+
+                        </li>
+
+
+
+
+
                         <li>
                             <a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
                         </li>

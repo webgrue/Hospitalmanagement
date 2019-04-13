@@ -24,6 +24,8 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin', 'middleware
 
 	Route::get('dashboard','AdminController@index')->name('dashboard');
 	Route::resource('doctor','DoctorController');
+	Route::resource('test','TestController');
+	Route::resource('department','DepertmentController');
 });
 
 //Doctor

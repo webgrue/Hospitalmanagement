@@ -43,7 +43,5 @@ class User extends Authenticatable
     }
 
 
-    public function doctor(){
-        return $this->belongsTo('App\Doctor','id','user_id');
-    }
+   
 }

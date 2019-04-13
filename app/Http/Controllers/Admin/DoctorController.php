@@ -22,8 +22,8 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $datas=User::where('role_id',2)->get();
-        $doctor=Doctor::all();
+        $datas=Doctor::latest()->get();
+       
 
        
         
