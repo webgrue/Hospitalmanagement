@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2019 at 11:54 PM
+-- Generation Time: Apr 14, 2019 at 10:24 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -73,9 +73,8 @@ INSERT INTO `date_doctor` (`id`, `date_id`, `doctor_id`, `created_at`, `updated_
 (4, 4, 2, '2019-04-11 09:31:35', '2019-04-11 09:31:35'),
 (5, 5, 2, '2019-04-11 09:31:35', '2019-04-11 09:31:35'),
 (6, 3, 3, '2019-04-11 09:34:30', '2019-04-11 09:34:30'),
-(7, 2, 4, '2019-04-11 11:22:42', '2019-04-11 11:22:42'),
-(8, 3, 4, '2019-04-11 11:22:42', '2019-04-11 11:22:42'),
-(9, 6, 4, '2019-04-11 11:22:42', '2019-04-11 11:22:42');
+(10, 1, 5, '2019-04-14 13:29:00', '2019-04-14 13:29:00'),
+(11, 2, 5, '2019-04-14 13:29:00', '2019-04-14 13:29:00');
 
 -- --------------------------------------------------------
 
@@ -101,7 +100,6 @@ CREATE TABLE `departments` (
 --
 
 INSERT INTO `departments` (`id`, `name`, `location`, `dept_head`, `details`, `stuf`, `date`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Tharapy', 'Dhaka', 'sdfjlsdaf', 'asdfsadf', 'sadfsdaf', '2019-04-14', 1, '2019-04-13 15:16:37', '2019-04-13 15:54:07'),
 (2, 'Tharapy', 'Dhaka', 'sdfjlsdaf', 'asdfsadf', 'sadfsdaf', '2019-04-14', NULL, '2019-04-13 15:16:59', '2019-04-13 15:16:59'),
 (3, 'Healths', 'Dhaka', 'Rafiq', 'This is Owesome s', 'Rafiqs', '2019-04-14', 1, '2019-04-13 15:36:53', '2019-04-13 15:54:12');
 
@@ -131,8 +129,7 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `degree`, `user_id`, `speciality`, `experience`, `RegNumber`, `mobile`, `gender`, `fee`, `certificate`, `created_at`, `updated_at`) VALUES
-(2, 'asdfdsaf', 10, 'sdafsdaf', 'er', '32434', '01717444', 'male', 3443, 'default.png', '2019-04-11 09:31:34', '2019-04-11 09:31:34'),
-(4, 'MBBS', 12, 'MEDICINE', 'YES', '1234567890', '12345678', 'male', 1213, '5caf77e23fea8_222670293_2019.png', '2019-04-11 11:22:42', '2019-04-11 11:22:42');
+(2, 'asdfdsaf', 10, 'sdafsdaf', 'er', '32434', '01717444', 'male', 3443, 'default.png', '2019-04-11 09:31:34', '2019-04-11 09:31:34');
 
 -- --------------------------------------------------------
 
@@ -246,8 +243,7 @@ INSERT INTO `users` (`id`, `name`, `role_id`, `username`, `email`, `email_verifi
 (4, 'Mr.Receptionist', 4, 'receptionist', 'reception@gmail.com', NULL, '$2y$10$Vods52tnbDq.JGwLWBdeyucXH9ABycU/4SFxPGQln96zDHi2Xvsyu', 'image.png', NULL, NULL, NULL, NULL),
 (5, 'Mr.Employee', 5, 'mmployee', 'employee@gmail.com', NULL, '$2y$10$2fMFa5vk9MXPDTg0zU09BuWB7IWFgfvgNliw9gjJOQq7aBUDax2zG', 'image.png', NULL, NULL, NULL, NULL),
 (8, 'Md.XYZ', 2, 'doctorbd', 'doctor1@gmail.com', NULL, '$2y$10$z3si92PfBmHNK21LqYKo/ekJUr/8io6aCocYSl9N2cu5m9vUzX1IC', 'default.png', NULL, NULL, '2019-04-11 09:28:54', '2019-04-11 09:28:54'),
-(10, 'Md.Asasdsd', 2, 'doctors', 'doctor2@gmail.com', NULL, '$2y$10$1l8n4LKYBeg.EFKJYK3yI.8lvuxll3miPgFYEPmHwLjkAzR5HsG8W', 'default.png', NULL, NULL, '2019-04-11 09:31:34', '2019-04-11 09:31:34'),
-(12, 'Asadur Nobi', 2, 'asadd', 'asdul@gmail.com', NULL, '$2y$10$EMTkKcstVu.vZdxjpGVqDO2Ru2DkhCx2Qv7HKZuMxpi.uYWp46WHS', '5caf77e21b3cf_1032091733_2019.png', NULL, NULL, '2019-04-11 11:22:42', '2019-04-11 11:22:42');
+(10, 'Md.Asasdsd', 2, 'doctors', 'doctor2@gmail.com', NULL, '$2y$10$1l8n4LKYBeg.EFKJYK3yI.8lvuxll3miPgFYEPmHwLjkAzR5HsG8W', 'default.png', NULL, NULL, '2019-04-11 09:31:34', '2019-04-11 09:31:34');
 
 --
 -- Indexes for dumped tables
@@ -322,7 +318,7 @@ ALTER TABLE `dates`
 -- AUTO_INCREMENT for table `date_doctor`
 --
 ALTER TABLE `date_doctor`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `departments`
@@ -334,7 +330,7 @@ ALTER TABLE `departments`
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -352,13 +348,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `tests`
 --
 ALTER TABLE `tests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
