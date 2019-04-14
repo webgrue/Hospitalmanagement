@@ -153,14 +153,11 @@ class DocinfochangeController extends Controller
 
     $data->dates()->detach($id);
      $users=User::where('id',$data->user_id)->delete();
-
     $data->delete();
-
-
 
     Toastr::success('Doctor Successfully Delete',"Delete");
 
-           return redirect()->back();
+     return redirect()->back();
 
     
 
