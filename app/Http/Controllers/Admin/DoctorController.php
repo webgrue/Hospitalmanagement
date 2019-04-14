@@ -95,7 +95,7 @@ class DoctorController extends Controller
 
                     $imagename=uniqid()."_".mt_rand()."_".date('Y').".".$imageExtension;
 
-                    $newproImage=Image::make($request->certificate)->resize(595,395)->save(90);
+                    $newproImage=Image::make($request->photo)->resize(595,395)->save(90);
 
                    // $newproImage=Image::make($proImage)->resize(220,220)->save(90);
 
@@ -173,7 +173,9 @@ class DoctorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data=Doctor::find($id);
+         $dates=Date::all();
+        return view('admin.doctor.edit',compact('data','dates'));
     }
 
     /**
@@ -198,4 +200,7 @@ class DoctorController extends Controller
     {
         //
     }
+
+
+    
 }

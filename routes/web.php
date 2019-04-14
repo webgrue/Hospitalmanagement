@@ -26,6 +26,10 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin', 'middleware
 	Route::resource('doctor','DoctorController');
 	Route::resource('test','TestController');
 	Route::resource('department','DepertmentController');
+
+	Route::post('changedate/{id}','DocinfochangeController@updatedates')->name('change.date');
+	Route::post('changeinfo/{id}','DocinfochangeController@updateinfo')->name('info.change');
+	Route::delete('destroy/{id}','DocinfochangeController@destroy')->name('destroy.doctor');
 });
 
 //Doctor

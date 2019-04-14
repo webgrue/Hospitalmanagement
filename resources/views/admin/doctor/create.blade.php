@@ -20,7 +20,7 @@
                 <form action="{{route('admin.doctor.store')}}" method="post" enctype="multipart/form-data">
                 	@csrf
                 	  
-                           <div class="card-box">
+         <div class="card-box">
                         <h3 class="card-title">Contact Informations</h3>
                         <div class="row">
                             <div class="col-md-12">

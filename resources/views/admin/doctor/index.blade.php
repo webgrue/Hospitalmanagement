@@ -62,16 +62,25 @@
                     <td>{{$data->fee}}</td>
                    
 
+
+
+
+                         
+
+                      
+                  
                     
                   
-                    <td class="text-right">
-                      <div class="dropdown dropdown-action">
-                        <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item" href="{{route('admin.doctor.edit',$data->id)}}"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                          <a class="dropdown-item" href="{{route('admin.doctor.destroy',$data->id)}}" data-toggle="modal" data-target="#delete_patient"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                        </div>
-                      </div>
+                    <td>
+                          
+
+                         <a class="btn btn-primary" href="{{route('admin.doctor.edit',$data->id)}}"> <span>Edit</span> </a>
+                         <button type="submit" class="btn btn-danger" onclick="deletedoctor({{$data->id}})">Delete</button>
+
+                         <form id="delete-data-{{$data->id}}" method="post" action ="{{route('admin.destroy.doctor',$data->id)}}"> 
+                            @csrf
+                            @method("DELETE")
+                         </form>
                     </td>
                   </tr>
                 
@@ -85,6 +94,28 @@
             </div>
             
         </div>
+
+        <script type="text/javascript">
+          
+            function deletedoctor(id){
+             
+
+              Swal.fire({
+                          title: 'Are you sure?',
+                          text: "You won't be able to revert this!",
+                          type: 'warning',
+                          showCancelButton: true,
+                          confirmButtonColor: '#3085d6',
+                          cancelButtonColor: '#d33',
+                          confirmButtonText: 'Yes, delete it!'
+                        }).then((result) => {
+                          if (result.value) {                           
+                            document.getElementById('delete-data-'+id).submit();
+                          }
+                        })
+            }
+
+        </script>
             
 
 @endsection

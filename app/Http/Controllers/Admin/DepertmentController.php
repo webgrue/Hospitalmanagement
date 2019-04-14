@@ -91,6 +91,8 @@ class DepertmentController extends Controller
     {
         $data=Department::find($id);
 
+        
+
         return view('admin.depertment.edit',compact('data'));
     }
 
